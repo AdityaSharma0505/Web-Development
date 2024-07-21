@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <a href="index.html">Go to First Page</a>
+    <br> <br>
+
+
+    <div>
+        <table border="black">
+            <caption>Student Information</caption>
+            <tr>
+                <th rowspan="6">Info</th>
+                <th rowspan="2">Name</th>
+                <th colpsan="2">Address</th>
+            </tr>
+            <tr>
+                <th>City</th>
+                <th>House</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>Delhi</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>Mumbai</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>Kolkata</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>Pune</td>
+                <td>4</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+
+    <div>
+        <form action="action.php">
+        <label for="name">Name : </label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="sex">Sex : </label>
+        <input type="radio" name="sex" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="sex" id="female" value="female">
+        <label for="female">Female</label>
+        <br>
+        <label for="country">Country : </label>
+        <select name="country" id="country">
+            <option>Select an option</option>
+            <option value="india">India</option>
+            <option value="america">America</option>
+        </select>
+        <br>
+        <label for="feedback">Message : </label>
+        <textarea name="feedback" id="feedback"></textarea>
+        <br>
+        <input type="checkbox" id="agree" name="agree" value="agree">
+        <label for="agree">Subscribe?</label>
+        <br>
+        <input type="submit">
+        <br> <br>
+        <hr>
+
+        <br>
+
+        <h1>Feedback Form</h1>
+        <label for="name">Name: </label>
+        <input type="text" id="name" placeholder="Write your name">
+        <br>
+        <label for="mail">Email: </label>
+        <input type="email" id="mail" placeholder="Write your email">
+        <br>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message"></textarea>
+        <br>
+
+        <label for="rate">Rate us out of 5:</label>
+        <input type="radio" name="rate" id="1" value="1">
+        <label for="1">1</label>
+        <input type="radio" name="rate" id="2" value="2">
+        <label for="2">2</label>
+        <input type="radio" name="rate" id="3" value="3">
+        <label for="3">3</label>
+        <input type="radio" name="rate" id="4" value="4">
+        <label for="4">4</label>
+        <input type="radio" name="rate" id="5" value="5">
+        <label for="5">5</label>
+
+    <br> <br>
+
+    <input type="submit" value="Send your message!">
+
+
+
+
+    </form>
+    </div>
+
+</body>
+</html>

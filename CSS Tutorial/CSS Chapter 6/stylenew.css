@@ -1,0 +1,42 @@
+h2 {
+    color: #d56f3e;
+}
+
+span {
+    color: #9d6f24;
+}
+
+#pets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.card {
+    border: 2px solid black;
+    border-radius: 25px;
+    width: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 10px;
+    padding: 10px;
+    text-align: start;
+}
+
+img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+h3 {
+    text-align: left;
+}
+
+h4 {
+    text-align: right;
+    color: #3c787e;
+}

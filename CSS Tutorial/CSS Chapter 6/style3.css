@@ -1,0 +1,22 @@
+.box {
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    background-color: pink;
+}
+
+
+/* Z-Index can only be used for the elements which have a absolute or a relative position. It cannot be applied for the postion: static or default position */
+/* By default, all the elements have Z-Index value as auto which is 0. The value of Z-Index can be either positive or 0 or negative. */
+
+.one {
+    background-color: aquamarine;
+    position: relative;
+    z-index: 1;
+}
+
+.two {
+    background-color: darksalmon;
+    position: relative;
+    bottom: 50px;
+}

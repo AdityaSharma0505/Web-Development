@@ -1,0 +1,28 @@
+* {
+    color: blue;
+}
+
+p {
+    color: rgb(47, 255, 0);
+}
+
+button {
+    color:rgb(75, 189, 81);
+    background-color: rgb(255, 255, 255);
+}
+
+#HeadingOne {
+    color: yellow;
+}
+
+#HeadingTwo {
+    color: chocolate;
+}
+
+#HeadingThree {
+    color: magenta;
+}
+
+body {
+    background-color: #f686bd;
+}

@@ -1,0 +1,678 @@
+Git Bash commands
+
+ls = list files
+(show my files)
+It prints the names of all the files in the folder in which we are
+
+pwd = print working directory
+(where am i?)
+
+clear = clear screen
+
+Navigation
+Inside and Outside directories
+
+cd = change directory
+
+cd (directory name) without ()
+
+cd .. = back button
+
+Paths
+Absolute and Relative
+
+cd Desktop/Delta (relative)
+cd /Users/shradhakhapra/Desktop (absolute)
+
+cd / (This command is used to go to root directory)
+cd ~ (This command is used to go to home directory)
+
+Making directories
+
+mkdir = make directory
+
+mkdir NewDir
+
+mkdir Delta/NewDir/Hello
+
+or
+
+mkdir /Users/shradhakhapra/Desktop/Delta/NewDir/Hello2
+
+Flags
+Flags are characters that we pass with commands to modify their behaviour
+
+Manual commands
+man ls - give info about ls command
+man mkdir - give info about mkdir command
+
+With Flags
+
+ls -l   (It also displays all the details of the files)
+ls -a   (It also includes all the files whose name start with . )
+ls -la  (We can also combine the above two flags together)
+
+Touch command
+Used to create files
+
+touch index.html
+touch app.js
+touch abc.txt
+
+It is actually used to change file access and modification times, but, if that file does not exists then it is created
+
+Deleting Files and Folders
+
+rm - removes files
+rmdir - removes empty folders
+rm -rf - removes any folders
+
+Configuring Git
+
+git config --global user.name "username"
+git config --global user.email "user email id"
+
+git config --list               (To see the list of the data)
+
+Basic Git Commands - 
+
+clone  - Cloning a repository on our local machine 
+git clone <-some link->
+
+status - Displays the state of the code 
+git status
+
+add - adds new or changed files in your working directory to the Git staging area 
+git add <-file name->
+or
+git add . 
+It adds all the files of the working directory
+
+commit - It is the record of change 
+git commit -m "some message"
+
+push - Upload local repo content to remote repo 
+git push origin main
+
+
+
+
+
+
+
+
+
+Terminal of vs code - 
+
+
+
+
+
+
+
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo
+$ git --version
+git version 2.45.2.windows.1
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo
+$ git clone https://github.com/AdityaSharma0505/delta-demo.git
+Cloning into 'delta-demo'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+Resolving deltas: 100% (1/1), done.
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo
+$ ls
+delta-demo/
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo
+$ cd delta-demo
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$ ls
+README.md
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$ ls -a
+./  ../  .git/  README.md
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$
+ *  History restored 
+
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo
+$
+ *  History restored 
+
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo
+$ git add index.html
+fatal: not a git repository (or any of the parent directories): .git
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo
+$ cd delta-demo
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$ git add index.html 
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        style.css
+
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$ git add . 
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        new file:   index.html
+        new file:   style.css
+
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$ git commit -m "Add new files"
+[main 628cd44] Add new files
+ 3 files changed, 17 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 style.css
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$ git push origin main
+info: please complete authentication in your browser...
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 586 bytes | 195.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/AdityaSharma0505/delta-demo.git
+   7fa48cc..628cd44  main -> main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/delta-demo (main)
+$
+
+
+
+
+
+
+
+
+
+
+
+Notes - 
+
+
+
+
+
+
+Basic Commands - 
+
+init - used to create a new git repo
+git init
+
+
+git remote add origin <-link->
+git remote -v (to verify remote)
+git branch (to check branch)
+git branch -M main (to rename branch)
+git push origin main
+
+
+Terminal of vs code - Pushing files created locally to GitHub - 
+
+
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git add .
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   index.html
+
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git commit -m "First Commit"
+[main (root-commit) 9a99027] First Commit
+ 2 files changed, 14 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 index.html
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$
+
+
+
+
+
+
+
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git remote add origin https://github.com/AdityaSharma0505/project2.git
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git remote -v
+origin  https://github.com/AdityaSharma0505/project2.git (fetch)
+origin  https://github.com/AdityaSharma0505/project2.git (push)
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git branch
+* main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git branch -M main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git branch
+* main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 471 bytes | 235.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/AdityaSharma0505/project2.git
+ * [new branch]      main -> main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git add . 
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git commit -m "Add name"
+[main bc6154d] Add name
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 356 bytes | 178.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/AdityaSharma0505/project2.git
+   9a99027..bc6154d  main -> main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$
+
+
+
+
+
+
+
+Notes - 
+
+git push -u origin main
+It sets the origin as main so after this we don't have to write again
+git push origin main 
+instead write
+git push 
+
+
+
+
+Terminal - 
+
+
+
+
+
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git commit -am "added dot"
+[main 27854a3] added dot
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 307 bytes | 307.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/AdityaSharma0505/project2.git
+   bc6154d..27854a3  main -> main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$
+
+
+
+
+
+Notes - 
+Branch Commands - 
+
+git branch (to check branch)
+git branch -M main (to rename branch)
+git checkout <-branch name->   (to navigate)
+git checkout -b <-new branch name-> (to create new branch)
+git branch -d <-branch name->  (to delete branch)
+
+
+
+Terminal - 
+
+
+
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo
+$ git branch
+fatal: not a git repository (or any of the parent directories): .git
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo
+$ cd project2
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git branch
+* main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git checkout -b feature 
+Switched to a new branch 'feature'
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (feature)
+$ git branch
+* feature
+  main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git branch
+  feature
+* main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git checkout feature
+Switched to branch 'feature'
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (feature)
+$ git branch
+* feature
+  main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git branch
+  feature
+* main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git checkout -b test
+Switched to a new branch 'test'
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (test)
+$ git branch
+  feature
+  main
+* test
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (test)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git branch
+  feature
+* main
+  test
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git branch -d test
+Deleted branch test (was 27854a3).
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git branch
+  feature
+* main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$
+
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git branch
+  feature
+* main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git push
+Everything up-to-date
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (main)
+$ git checkout feature
+Switched to branch 'feature'
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (feature)
+$ git branch
+* feature
+  main
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (feature)
+$ git push
+fatal: The current branch feature has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (feature)
+$ git push --set-upstream origin feature
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 337 bytes | 168.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/AdityaSharma0505/project2/pull/new/feature
+remote:
+To https://github.com/AdityaSharma0505/project2.git
+ * [new branch]      feature -> feature
+branch 'feature' set up to track 'origin/feature'.
+
+adity@LAPTOP-J0MHQ756 MINGW64 ~/OneDrive/Desktop/GitDemo/project2 (feature)
+$
+
+
+
+
+Notes - 
+
+Merging Code - 
+
+
+git diff <-branch name->  (to compare commits, branches, files & more)
+
+git merge <-branch name->  (to merge 2 branches)
+
+OR 
+
+Create a PR
+
+
+
+Basic commands - 
+
+git pull origin main
+
+used to fetch and download content from a remote repo and immediately update repo to match that content
+
+Merge Conflicts - 
+An event that takes place when Git is unable to automatically 
+
+Fixing mistakes - 
+
+case 1 : staged changes
+git reset <-file name->
+git reset
+
+case 2 : commited changes (for one commit)
+git reset HEAD~1
+
+case 3 : commited changes (for many commits) 
+git reset <-commit hash->
+git reset --hard <-commit hash-> 
+
