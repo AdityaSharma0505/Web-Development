@@ -1,0 +1,42 @@
+process - This object provides information about, and control over, the current Node.js process
+
+process.argv - Returns an array containing the command - line arguments passed when the Node.js process was launched
+
+module.exports
+require() - a built-in function to include external modules that exist in separate files
+module.exports - a special object
+
+
+
+NPM - Node Package Manager
+npm is the standard package manager for node.js
+
+It is - 
+1 - Library of packages
+2 - command line tool
+
+
+
+Installing Packages - 
+
+node_modules - The node_modules folder contains every installed dependency for your project.
+
+package-lock.json - It records the exact version of every installed dependency, including its sub-dependencies and their versions.
+
+package.json - The package.json file contains descriptive and functional metadata about a project, such as a name, version and dependencies
+
+npm init - It initilises and creates a package of the directory
+
+Local vs Global Install - 
+
+npm intall -g <-package name->
+npm link <-package name->
+
+
+require vs import - 
+
+import {sum} from "./math.js"
+
+We can't selectively load only the pieces we need with require but with import, we can selectivey load only the pieces we need, which can save memory.
+Loading is synchronous for 'require', but can be asynchronous for 'import'.
+
